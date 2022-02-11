@@ -1,0 +1,49 @@
+/* top navigation*/
+.navigation-top {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #FFF;
+    /* background-color: rgb(59,89,152); */
+    /*background-color: rgba(59,89,152, 9);*/
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.navigation-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.navigation-top a {
+    padding: 8px;
+    text-decoration: underline;
+    font-size: 60px;
+    color: rgb(59,89,152);
+    display: block;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.navigation-top a:hover, .navigation-top a:focus {
+    color: rgb(172,177,190);
+}
+
+.navigation-top .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+.navigation-top .closebtn {
+    text-decoration: none;
+}
+
+/* end of top navigation */

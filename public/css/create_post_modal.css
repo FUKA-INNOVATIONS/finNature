@@ -1,0 +1,127 @@
+/* The Modal (background) */
+.create-post-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 50px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.cp-modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    float: right;
+    font-size: 50px;
+    font-weight: bold;
+    color: rgb(59,89,152);
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #FFF;
+    color: white;
+}
+
+.modal-body {
+    padding: 50px;
+    width: 350px;
+}
+
+.modal-footer {
+    padding: 2px 16px;
+    color: white;
+    margin-bottom: 40px;
+}
+
+/* Forms */
+
+
+#createForm input[type=text], input[type=password] {
+    border: 1px solid rgb(59, 89, 152);
+    border-radius: 20px;
+    width: 250px;
+    padding: 10px;
+}
+
+.select-file-label {
+    margin-bottom: 15px;
+}
+
+
+.form-header {
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+
+
+
+.create-btn {
+    float: right;
+    width: 90px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.error {
+    color: red;
+    float: left;
+    display: none;
+}
+
+
+
+@media only screen and (min-width: 835px) {
+    .modal-content {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 834px) {
+    .modal-content {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    .modal-content {
+        width: 80%;
+    }
+}

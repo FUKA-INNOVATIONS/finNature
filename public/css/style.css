@@ -1,0 +1,707 @@
+/* import fonts */
+
+@font-face {
+    font-family: 'Sukhumvit Set';
+    src: url('../assets/fonts/SukhumvitSet-Bold.ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sukhumvit Set';
+    src: url('../assets/fonts/SukhumvitSet-Light.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0;
+    box-sizing: border-box;
+    font-family: "Sukhumvit Set";
+    color: rgb(59,89,152);
+}
+
+.hidden {
+    display: none;
+}
+
+.primary-color {
+    color: rgb(59,89,152)
+}
+
+.secondary-color {
+    color: rgb(172,177,190)
+}
+
+.card-round
+.padding-10 {
+    padding: 10px;
+}
+
+.padding-20 {
+    padding: 20px;
+}
+
+.rounded-corner {
+    border-radius: 100px;
+}
+
+.container {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #F7F7F7;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.user-banner {
+    display: flex;
+    align-items: center;
+}
+
+.user-profile-image {
+    border-radius: 100%;
+}
+
+.posts-home {
+    text-align: center;
+}
+
+.post-items-home {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.post-item > .post-description {
+    text-align: center;
+    margin-top: 25px;
+    line-height: 1.2;
+    display: none;
+}
+
+
+.post-item > .post-location {
+    margin-top: 10px;
+}
+
+.post-icons-home > .like-counter-home {
+    position: absolute;
+    top: -15px;
+}
+
+.posts-header {
+    text-decoration: underline;
+}
+
+.post-image {
+    border-radius: 150px;
+}
+
+#popular-posts {
+    margin-bottom: 100px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 100px;
+    margin-bottom: 25px;
+}
+
+.footer-box > ul > li {
+    color: #A7ADBA;
+    list-style: none;
+}
+
+.posts-home > .posts-header {
+    font-size: 60px;
+}
+
+.post-icons-home {
+    position: relative;
+    margin-top: 10px;
+}
+
+.post-icons-home > .like-counter-home {
+    position: absolute;
+    top: -15px;
+}
+
+.nav-open {
+    background: transparent;
+}
+
+.nav-open-icon {
+    color: #FFF;
+    font-size: 40px;
+}
+
+.header-username {
+    color: #FFF;
+}
+
+
+/* Desktop query */
+@media only screen and (min-width: 835px) {
+    .container {
+        width: 1280px;
+    }
+
+    .header {
+        background-color: rgb(59,89,152);
+        height: 75px;
+        padding: 10px 20px 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-family: "Sukhumvit Set";
+        color: #FFF;
+        font-size: 35px;
+        /*float: left;*/
+    }
+
+    .search-container {
+        display: flex;
+    }
+
+    .search-input {
+        border-radius: 100px;
+        min-width: 200px;
+        height: 25px;
+        padding: 10px;
+
+    }
+
+    .search-button {
+        border-radius: 100px;
+        background-color: transparent;
+        color: #FFF;
+        font-size: 20px;
+    }
+
+    .navigation {}
+    .nav-open {}
+
+    .post-items-home > .post-item {
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 35px;
+    }
+
+    .post-icons-home {
+        position: relative;
+        margin-top: 10px;
+    }
+
+    .mobile-footer {
+        display: none;
+    }
+
+    /* Miikka */
+
+    .browse-search {
+        border-radius: 5px;
+        min-width: 550px;
+        height: 50px;
+        padding: 10px;
+    }
+
+    .profile-picture {
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 35px;
+        float: left;
+    }
+
+    .profile-about {
+        width: 65%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 100px;
+        float: right;
+    }
+
+    .profile-about > .about-title {
+        font-size: xx-large;
+        text-decoration: underline;
+    }
+
+    .profile-about > .about-text {
+        margin-top: 10px;
+        width: 70%;
+        text-align: center;
+        color: gray;
+    }
+
+    .profile-picture > .photo-like {
+        margin-top: 10px;
+        font-size: small;
+        color: gray;
+        text-decoration: underline;
+    }
+
+    .get-in-touch {
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 35px;
+        float: left;
+    }
+
+    .how-to {
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 35px;
+        float: right;
+    }
+
+    .contact-page > .get-in-touch > .get-in-touch-title {
+        font-size: 300%;
+    }
+
+    .contact-page > .get-in-touch > .your-name {
+        margin-top: 10px;
+    }
+
+    .contact-page > .get-in-touch > .your-email {
+        margin-top: 15px;
+    }
+
+    .contact-page > .get-in-touch > .subject {
+        margin-top: 15px;
+    }
+
+    .contact-page > .get-in-touch > .your-message {
+        margin-top: 15px;
+    }
+
+
+    .contact-page > .how-to > .how-to-title {
+        font-size: 300%;
+        text-decoration: underline;
+    }
+
+    .contact-page > .how-to > .create-post {
+        margin-top: 10px;
+    }
+
+    .contact-page > .how-to > .register {
+        margin-top: 15px;
+    }
+
+    .contact-page > .how-to > .write-comment {
+        margin-top: 15px;
+    }
+
+    .contact-page > .how-to > .reset-pw {
+        margin-top: 15px;
+    }
+
+    .contact-input {
+        border-radius: 100px;
+        min-width: 100px;
+        height: 25px;
+        padding: 25px;
+    }
+
+}
+/* end of desctop query */
+
+
+/* Start of tablet query */
+@media only screen and (max-width: 834px) {
+    .container {
+        width: 100%;
+    }
+
+    .header {
+        background-color: rgb(59,89,152);
+        height: 75px;
+        padding: 0px 20px 0px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-family: "Sukhumvit Set";
+        color: #FFF;
+        font-size: 25px;
+    }
+
+    .search-container {
+        display: flex;
+    }
+
+    .search-input {
+        border-radius: 100px;
+        min-width: 200px;
+        height: 25px;
+        padding: 10px;
+
+    }
+
+    .search-button {
+        border-radius: 100px;
+        height: 25px;
+        background-color: transparent;
+        color: #FFF;
+        font-size: 20px;
+    }
+
+    .user-banner > figure {
+        display: flex;
+    }
+
+    .post-items-home > .post-item {
+        width: 33%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 35px;
+    }
+
+    .mobile-footer {
+        display: none;
+    }
+
+    /* Miikka */
+
+    .browse-search {
+        border-radius: 5px;
+        min-width: 550px;
+        height: 50px;
+        padding: 10px;
+    }
+
+    .profile-picture {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 35px;
+        float: left;
+    }
+
+    .profile-about {
+        width: 55%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 100px;
+        float: right;
+    }
+
+    .profile-about > .about-title {
+        font-size: xx-large;
+        text-decoration: underline;
+    }
+
+    .profile-about > .about-text {
+        margin-top: 10px;
+        text-align: center;
+        color: gray;
+    }
+
+    .profile-picture > .photo-like {
+        margin-top: 10px;
+        font-size: small;
+        color: gray;
+        text-decoration: underline;
+    }
+
+    .get-in-touch {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 35px;
+        float: left;
+    }
+
+    .how-to {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 35px;
+        float: right;
+    }
+
+    .contact-page > .get-in-touch > .get-in-touch-title {
+        font-size: 300%;
+    }
+
+    .contact-page > .get-in-touch > .your-name {
+        margin-top: 10px;
+    }
+
+    .contact-page > .get-in-touch > .your-email {
+        margin-top: 15px;
+    }
+
+    .contact-page > .get-in-touch > .subject {
+        margin-top: 15px;
+    }
+
+    .contact-page > .get-in-touch > .your-message {
+        margin-top: 15px;
+    }
+
+
+    .contact-page > .how-to > .how-to-title {
+        font-size: 300%;
+    }
+
+    .contact-page > .how-to > .create-post {
+        margin-top: 10px;
+    }
+
+    .contact-page > .how-to > .register {
+        margin-top: 15px;
+    }
+
+    .contact-page > .how-to > .write-comment {
+        margin-top: 15px;
+    }
+
+    .contact-page > .how-to > .reset-pw {
+        margin-top: 15px;
+    }
+
+    .contact-input {
+        border-radius: 100px;
+        width: 300px;
+        height: 40px;
+        padding: 10px;
+    }
+
+
+}
+/* End of tablet query */
+
+
+/* Satrt of mobile query */
+@media only screen and (max-width: 390px) {
+    .container {
+        width: 100%;
+    }
+
+    .header {
+        background-color: rgb(59,89,152);
+        height: 65px;
+        padding: 10px 20px 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-family: "Sukhumvit Set";
+        color: #FFF;
+        font-size: 20px;
+    }
+
+    .search {
+        display: flex;
+    }
+
+    .search-input {
+        border-radius: 100px;
+        min-width: 100px;
+        height: 25px;
+        padding: 10px;
+
+    }
+
+    .search-button {
+        border-radius: 100px;
+        height: 25px;
+        background-color: transparent;
+        color: #FFF;
+        font-size: 20px;
+    }
+
+    .user-banner {
+        display: none;
+    }
+
+    .posts-home > .posts-header {
+        font-size: 35px;
+    }
+
+    .post-items-home > .post-item {
+        width: 100%;
+    }
+
+    .post-item > .post-image {
+        width: 85%;
+    }
+
+    #latest-posts {
+        margin-bottom: 25px;
+    }
+
+    .footer {
+        display: none;
+    }
+
+    .mobile-footer {
+        display: flex;
+        justify-content: space-around;
+        background-color: rgb(59,89,152);
+        padding: 15px 0px 15px 0px;
+    }
+
+    .mobile-footer > .footer-icon{
+        font-size: 50px;
+        color: #FFF;
+    }
+
+    .nav-open-icon {
+        font-size: 25px;
+    }
+
+    /* Miikka */
+
+    .browse-search {
+        border-radius: 5px;
+        min-width: 550px;
+        height: 50px;
+        padding: 10px;
+    }
+
+    .profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-picture {
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 35px;
+        float: left;
+    }
+
+    .profile-about {
+        width: 55%;
+        float: right;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 80px;
+    }
+
+    .profile-about > .about-title {
+        font-size: xx-large;
+        text-decoration: underline;
+    }
+
+    .profile-about > .about-text {
+        width: 150%;
+        margin-top: 10px;
+        text-align: center;
+        color: gray;
+    }
+
+    .profile-picture > .photo-like {
+        margin-top: 10px;
+        font-size: small;
+        color: gray;
+        text-decoration: underline;
+    }
+
+    .get-in-touch {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 35px;
+        float: left;
+    }
+
+    .how-to {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 60px;
+        float: right;
+    }
+
+    .contact-page > .get-in-touch > .get-in-touch-title {
+        font-size: 300%;
+    }
+
+    .contact-page > .get-in-touch > .your-name {
+        margin-top: 10px;
+    }
+
+    .contact-page > .get-in-touch > .your-email {
+        margin-top: 15px;
+    }
+
+    .contact-page > .get-in-touch > .subject {
+        margin-top: 15px;
+    }
+
+    .contact-page > .get-in-touch > .your-message {
+        margin-top: 15px;
+    }
+
+
+    .contact-page > .how-to > .how-to-title {
+        font-size: 300%;
+    }
+
+    .contact-page > .how-to > .create-post {
+        margin-top: 10px;
+    }
+
+    .contact-page > .how-to > .register {
+        margin-top: 15px;
+    }
+
+    .contact-page > .how-to > .write-comment {
+        margin-top: 15px;
+    }
+
+    .contact-page > .how-to > .reset-pw {
+        margin-top: 15px;
+    }
+
+    .contact-input {
+        border-radius: 100px;
+        width: 100%;
+        height: 25px;
+        padding: 25px;
+    }
+
+
+}
+/* Satrt of mobile query */
+
+
+

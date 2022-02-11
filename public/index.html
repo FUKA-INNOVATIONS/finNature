@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/fonts/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/top-navigation.css">
+    <link rel="stylesheet" href="css/authentication.css">
+    <link rel="stylesheet" href="css/create_post_modal.css">
+    <script src="js/conf-public.js"></script>
+    <title>finNature.fi</title>
+</head>
+
+<body>
+<!-- start of top Navigation menu -->
+
+<nav class="navigation-top" id="navigation-top">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="navigation-content">
+        <a href="#">Home</a>
+        <a href="#" id="createPostBtn">Create post</a>
+        <a href="#">Spots</a>
+        <a href="http://localhost:3000/profile.html">Profile</a>
+        <a href="#" id="authentication-btn">Sign in</a>
+        <a href="#" id="logoutBtn">Sign out</a>
+    </div>
+</nav>
+
+<!-- end of top Navigation menu -->
+
+
+
+
+
+<!-- Start of create post modal -->
+<div id="createPostModal" class="create-post-modal">
+    <!-- Modal content -->
+    <div class="cp-modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <!-- <h2>Modal Header</h2> -->
+        </div>
+        <div class="modal-body">
+
+            <section class="create-post-section" id="createPostSection">
+                <h1 class="form-header">Create post</h1>
+                <form id="createPostForm" enctype="multipart/form-data">
+                    <!-- TODO: form validation -->
+                    <!-- TODO: form hints -->
+                    <!-- TODO: Add error message for all fields or color form hints for errors -->
+                    <input type="file" accept="image/*" id="create-post-file" name="create-post-file" placeholder="Select file">
+                    <br />
+                    <label for="create-post-file" class="select-file-label">Jpeg/Png/Gif/Avi/mp4 [max 2MB]</label>
+                    <br />
+                    <input type="text" id="create-post-location" name="createPostLocation" placeholder="Location">
+                    <br />
+                    <br />
+                    <!-- TODO: checnge field to calender -->
+                    <input type="text" id="create-post-date" name="createPostDate" placeholder="Date">
+                    <br>
+                    <br />
+                    <input type="text" rows="4" id="post-tag" name="tag" placeholder="Tag">
+                    <br>
+                    <br />
+                    <textarea id="create-post-description" cols="80" rows="8" name="createPostDescription" maxlength="255" placeholder="Description:max 255 charecters"></textarea>
+                    <br>
+                    <br />
+                    <span class="error" id="createPostError">Post creation failed</span>
+                    <button type="submit" class="create-post-btn" id="createBtn">Create and publish</button>
+                </form>
+            </section>
+        </div>
+        <div class="modal-footer">
+            <!-- <h3>Modal Footer</h3> -->
+        </div>
+    </div>
+
+</div>
+
+<!-- End of create post modal -->
+
+
+
+
+<!-- Start of authentication modal -->
+<!-- The Modal -->
+<div id="authModal" class="auth-modal">
+    <!-- Modal content -->
+    <div class="auth-modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <!-- <h2>Modal Header</h2> -->
+        </div>
+        <div class="modal-body">
+            <section class="login-in-section" id="signIn">
+                <h1 class="form-header">Sign in</h1>
+                <form id="loginInForm">
+                    <!-- TODO: form validation -->
+                    <input type="text" id="login-email" name="username" placeholder="Email address">
+                    <br />
+                    <input type="password" id="login-password" name="password" placeholder="Password">
+                    <br>
+                    <span class="error" id="loginError">Authentication failed</span>
+                    <button type="submit" class="login-in-btn" id="loginInBtn">Sign in</button>
+                </form>
+            </section>
+
+
+            <section class="register-section" id="register">
+                <h1 class="form-header">Sign up</h1>
+                <form id="registerForm">
+                    <!-- TODO: form validation -->
+                    <!-- TODO: form hints -->
+                    <!-- TODO: Add error message for all fields -->
+                    <input type="text" id="register-username" name="nickname" placeholder="Username">
+                    <br />
+                    <label for="register-username" class="login-register-form-label">3-10 Characters</label>
+                    <br />
+                    <input type="text" id="register-email" name="username" placeholder="Email address">
+                    <br />
+                    <br />
+                    <input type="password" id="register-password" name="password" placeholder="Password">
+                    <br>
+                    <label for="register-username">8 characters, 1 Uppdercase</label>
+                    <br />
+                    <input type="password" id="register-password-repeat" name="password-repeat" placeholder="Repeat password">
+                    <br>
+                    <br />
+                    <span class="error" id="registerError">Registration failed</span>
+                    <button type="submit" class="register-btn" id="registerBtn">Sign up</button>
+                </form>
+            </section>
+        </div>
+        <div class="modal-footer">
+            <!-- <h3>Modal Footer</h3> -->
+        </div>
+    </div>
+
+</div>
+<!-- end of authentication modal -->
+
+<div class="container">
+    <header class="header">
+            <span class="logo">
+                finNature.fi
+            </span>
+        <section class="search-container">
+            <form class="search" id="search">
+                <input class="search-input" type="text" placeholder="Search sposts">
+                <button class="search-button" type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </section>
+        <section id="user-banner" class="user-banner">
+            <!-- <button class="create-post-header" id="createPostBtn"><i class="fas fa-plus"></i></button> -->
+            <img src="http://placekitten.com/50/50" class="user-profile-image">
+            <span class="header-username" id="header-username">natureguru</span>
+            <button class="logout-banner" id="logout-banner"><i class="fas fa-sign-out-alt"></i>Sign out</button>
+        </section>
+        <nav class="navigation">
+            <button id="nav-open" class="nav-open" onclick="openNav()"><i class=" nav-open-icon fa fa-bars"></i> </button>
+        </nav>
+    </header>
+    <main>
+
+        <!-- Start of popular posts -->
+        <section class="posts-home" id="popularPostsSection">
+            <h2 class="posts-header">Popular posts</h2>
+           <div class="post-items-home" id="popularPostsItemHome">
+               <!-- Content injected by index.js -->
+           </div>
+        </section>
+        <!-- end of popular spots section -->
+
+
+
+        <!-- Start of Latest posts section -->
+
+        <section class="posts-home" id="latest-posts">
+            <h2 class="posts-header">Latest spots</h2>
+            <div class="post-items-home" id="latestPostsItemHome">
+                <!-- Content injected by index.js -->
+            </div>
+        </section>
+
+        <!-- End of Latest posts section -->
+
+
+        <!-- end of main content -->
+    </main>
+
+    <footer class="footer">
+        <section class="footer-box">
+            <ul>
+                <li>Sign in</li>
+                <li>Sign up</li>
+                <li>Browse spots</li>
+                <li>Search spots</li>
+                <li>Contact us</li>
+                <li>Retrieve password</li>
+            </ul>
+        </section>
+        <section class="footer-box">
+            <ul>
+                <li>Sign in</li>
+                <li>Sign up</li>
+                <li>Browse spots</li>
+                <li>Search spots</li>
+                <li>Contact us</li>
+                <li>Retrieve password</li>
+            </ul>
+        </section>
+        <section id="footer-desktop" class="footer-box">
+            <ul>
+                <li>Sign in</li>
+                <li>Sign up</li>
+                <li>Browse spots</li>
+                <li>Search spots</li>
+                <li>Contact us</li>
+                <li>Retrieve password</li>
+            </ul>
+        </section>
+    </footer>
+
+    <footer class="mobile-footer">
+        <i class="footer-icon fa fa-user"></i>
+        <i class="footer-icon fa fa-cog"></i>
+        <i class="footer-icon fa fa-home"></i>
+        <i class="footer-icon fa fa-plus-circle"></i>
+    </footer>
+
+    <!-- end container -->
+</div>
+
+<!-- Javascriptit -->
+<script src="js/serialize.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/authentication.js"></script>
+<script src="js/header.js"></script>
+<script src="js/createPost.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

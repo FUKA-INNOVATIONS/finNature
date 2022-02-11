@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/fonts/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/top-navigation.css">
+    <link rel="stylesheet" href="css/authentication.css">
+    <script src="js/conf-public.js"></script>
+    <title>finNature.fi</title>
+</head>
+
+<body>
+
+<!-- start of top Navigation menu -->
+
+<nav class="navigation-top" id="navigation-top">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="navigation-content">
+        <a href="#">Home</a>
+        <a href="#">Spots</a>
+        <a href="http://localhost:3000/profile.html">Profile</a>
+        <a href="#" id="authentication-btn">Sign in</a>
+        <a href="http://localhost:3000/auth/logout">Sign out</a>
+    </div>
+</nav>
+
+<!-- end of top Navigation menu -->
+
+
+
+<!-- Start of authentication modal -->
+<!-- The Modal -->
+<div id="authModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <!-- <h2>Modal Header</h2> -->
+        </div>
+        <div class="modal-body">
+            <section class="login-in-section" id="signIn">
+                <h1 class="form-header">Sign in</h1>
+                <form id="loginInForm">
+                    <!-- TODO: form validation -->
+                    <input type="text" id="login-email" name="username" placeholder="Email address">
+                    <br />
+                    <input type="password" id="login-password" name="password" placeholder="Password">
+                    <br>
+                    <span class="error" id="loginError">Authentication failed</span>
+                    <button type="submit" class="login-in-btn" id="loginInBtn">Sign in</button>
+                </form>
+            </section>
+
+
+            <section class="register-section" id="register">
+                <h1 class="form-header">Sign up</h1>
+                <form id="registerForm">
+                    <!-- TODO: form validation -->
+                    <!-- TODO: form hints -->
+                    <!-- TODO: Add error message for all fields -->
+                    <input type="text" id="register-username" name="nickname" placeholder="Username">
+                    <br />
+                    <label for="register-username" class="login-register-form-label">3-10 Characters</label>
+                    <br />
+                    <input type="text" id="register-email" name="username" placeholder="Email address">
+                    <br />
+                    <br />
+                    <input type="password" id="register-password" name="password" placeholder="Password">
+                    <br>
+                    <label for="register-username">8 characters, 1 Uppdercase</label>
+                    <br />
+                    <input type="password" id="register-password-repeat" name="password-repeat" placeholder="Repeat password">
+                    <br>
+                    <br />
+                    <span class="error" id="registerError">Registration failed</span>
+                    <button type="submit" class="register-btn" id="registerBtn">Sign up</button>
+                </form>
+            </section>
+        </div>
+        <div class="modal-footer">
+            <!-- <h3>Modal Footer</h3> -->
+        </div>
+    </div>
+
+</div>
+<!-- end of authentication modal -->
+
+<div class="container">
+    <header class="header">
+            <span class="logo">
+                finNature.fi
+            </span>
+        <section class="search-container">
+            <form class="search" id="search">
+                <input class="search-input" type="text" placeholder="Search sposts">
+                <button class="search-button" type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </section>
+        <section id="user-banner" class="user-banner">
+            <img src="http://placekitten.com/50/50" class="user-profile-image">
+            <span class="header-username" id="header-username">natureguru</span>
+            <button class="logout-banner" id="logout-banner"><i class="fa fa-search"></i></button>
+        </section>
+        <nav class="navigation">
+            <button id="nav-open" class="nav-open"><i class=" nav-open-icon fa fa-bars"></i> </button>
+        </nav>
+    </header>
+
+
+    <main>
+        <div class="profile">
+            <article class="profile-picture">
+                <!-- <img class="post-image" src="test-images/tampere.png"> -->
+                <img src="http://placekitten.com/300/300" class="post-image">
+                <h1 class="profile-picture-title">
+                    Natureguru
+                </h1>
+                <p class="photo-like">Photos and Likes</p>
+            </article>
+
+            <article class="profile-about">
+                <h1 class="about-title">
+                    About
+                </h1>
+                <p class="about-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
+            </article>
+        </div>
+
+        <section class="posts-home" id="popular-posts">
+            <div class="post-items-home" id="profilePostsSection">
+
+
+            </div>
+        </section>
+
+
+
+    </main>
+
+    <footer class="footer">
+        <section class="footer-box">
+            <ul>
+                <li>Sign in</li>
+                <li>Sign up</li>
+                <li>Browse spots</li>
+                <li>Search spots</li>
+                <li>Contact us</li>
+                <li>Retrieve password</li>
+            </ul>
+        </section>
+        <section class="footer-box">
+            <ul>
+                <li>Sign in</li>
+                <li>Sign up</li>
+                <li>Browse spots</li>
+                <li>Search spots</li>
+                <li>Contact us</li>
+                <li>Retrieve password</li>
+            </ul>
+        </section>
+        <section class="footer-box">
+            <ul>
+                <li>Sign in</li>
+                <li>Sign up</li>
+                <li>Browse spots</li>
+                <li>Search spots</li>
+                <li>Contact us</li>
+                <li>Retrieve password</li>
+            </ul>
+        </section>
+    </footer>
+
+    <footer class="mobile-footer">
+        <i class="footer-icon fa fa-user"></i>
+        <i class="footer-icon fa fa-cog"></i>
+        <i class="footer-icon fa fa-home"></i>
+        <i class="footer-icon fa fa-plus-circle"></i>
+    </footer>
+
+    <!-- end container -->
+</div>
+
+<!-- Javascriptit -->
+<script src="js/serialize.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/authentication.js"></script>
+<script src="js/profile.js"></script>
+</body>
+</html>

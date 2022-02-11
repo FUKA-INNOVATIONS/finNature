@@ -1,0 +1,30 @@
+{
+  "name": "wt-p4-final-project",
+  "version": "1.0.0",
+  "description": "WT P4 Final project: finNature",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.metropolia.fi/fuwadk/wt-p4-final-project.git"
+  },
+  "author": "Fuwad K., Mari Eronen, Miikka Selander",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^8.2.0",
+    "exif": "^0.6.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.10.1",
+    "jsonwebtoken": "^8.5.1",
+    "multer": "^1.4.2",
+    "mysql2": "^2.2.5",
+    "nodemon": "^2.0.7",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "sharp": "^0.28.1"
+  }
+}

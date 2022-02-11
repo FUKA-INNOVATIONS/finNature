@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/fonts/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="./js/conf-public.js"></script>
+    <title>finNature.fi</title>
+</head>
+
+<body>
+<div class="container">
+    <header class="header">
+            <span class="logo">
+                finNature.fi
+            </span>
+        <section class="search-container">
+            <form class="search" id="search">
+                <input class="search-input" type="text" placeholder="Search sposts">
+                <button class="search-button" type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </section>
+        <section id="user-banner" class="user-banner">
+            <img src="http://placekitten.com/50/50" class="user-profile-image">
+            <span class="header-username" id="header-username">natureguru</span>
+            <button class="logout-banner" id="logoutBtn"><i class="fa fa-search"></i></button>
+        </section>
+        <nav class="navigation">
+            <button id="nav-open" class="nav-open"><i class=" nav-open-icon fa fa-bars"></i> </button>
+        </nav>
+    </header>
+
+
+    <main>
+        <div class="profile" id="singlePostContentDiv">
+        </div>
+
+        <div class="commentWrite" id="commentWrite">
+            <form id="commentWriteForm" class="commentWriteForm">
+                <input type="text" name="commentNewContent" class="commentNewContent" id="commentNewContent">
+                <br />
+                <button type="submit" name="commentNewSubmit" id="commentNewSubmit">Leave comment</button>
+            </form>
+        </div>
+
+
+
+
+
+    </main>
+
+    <footer class="footer">
+        <section class="footer-box">
+            <ul>
+                <li>Sign in</li>
+                <li>Sign up</li>
+                <li>Browse spots</li>
+                <li>Search spots</li>
+                <li>Contact us</li>
+                <li>Retrieve password</li>
+            </ul>
+        </section>
+        <section class="footer-box">
+            <ul>
+                <li>Sign in</li>
+                <li>Sign up</li>
+                <li>Browse spots</li>
+                <li>Search spots</li>
+                <li>Contact us</li>
+                <li>Retrieve password</li>
+            </ul>
+        </section>
+        <section class="footer-box">
+            <ul>
+                <li>Sign in</li>
+                <li>Sign up</li>
+                <li>Browse spots</li>
+                <li>Search spots</li>
+                <li>Contact us</li>
+                <li>Retrieve password</li>
+            </ul>
+        </section>
+    </footer>
+
+    <footer class="mobile-footer">
+        <i class="footer-icon fa fa-user"></i>
+        <i class="footer-icon fa fa-cog"></i>
+        <i class="footer-icon fa fa-home"></i>
+        <i class="footer-icon fa fa-plus-circle"></i>
+    </footer>
+
+    <!-- end container -->
+</div>
+</body>
+
+<!-- Javascriptit -->
+<script src="js/serialize.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/authentication.js"></script>
+<script src="js/header.js"></script>
+<script src="js/createPost.js"></script>
+<script src="js/post-detail.js"></script>
+<!-- Javascriptit -->
+</html>
